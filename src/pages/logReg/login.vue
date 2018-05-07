@@ -8,7 +8,7 @@
      <div class="content">
        <div class="box">
          <div class="icon user_icon"></div>
-         <input v-model="userName" type="text" placeholder="请输入用户名/手机号" v-focus ref="inputfocus">
+         <input v-model="userName" type="text" placeholder="请输入用户名/手机号" ref="inputfocus">
        </div>
        <div class="box">
          <div class="icon password_icon"></div>
@@ -42,9 +42,6 @@ export default {
       password: ''
     }
   },
-  mounted () {
-    this.$refs.inputfocus.focus()
-  },
   methods: {
     back () {
       this.$router.go(-1)
@@ -72,13 +69,6 @@ export default {
   },
   components: {
     XInput
-  },
-  directives: {
-    focus: {
-      inserted: function (el) {
-        el.focus()
-      }
-    }
   }
 }
 </script>
@@ -86,26 +76,30 @@ export default {
 .login_container{
   width: 100%;
   font-family: PingFangSC-Regular;
-  display:flex;
-  flex-direction: column;
+  /* display:flex;
+  flex-direction: column; */
 }
 .content{
   width: 78%;
   margin: 0 auto;
-  flex: 0 0 58%;
+  /* flex: 0 0 58%; */
 }
 .header{
   margin-bottom: 10%;
   width: 100%;
-  height: 245px;
+  height: 0;
+  padding-top:66%;
   background-size:100% 100%;
   background-repeat: no-repeat;
   background-image: url('img/banner@2x.png');
-  flex:1;
+  /* flex:1; */
 }
 .mint-header{
   background:rgba(0,0,0,0);
   font-size: 17px;
+      position: absolute;
+    top: 0;
+    width: 100%;
 }
 .mint-header-title{
   font-size: 20px;

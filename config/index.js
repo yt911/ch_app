@@ -11,11 +11,11 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/':'http://192.168.5.44:8080/ssm2/'
+      '/':'http://192.168.0.104:8081/ssm2/'
      },
     // Various Dev Server settings
-    host: '192.168.5.44', // can be overwritten by process.env.HOST
-    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    host: '192.168.0.104', // can be overwritten by process.env.HOST
+    port: 8081, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
